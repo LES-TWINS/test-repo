@@ -1,0 +1,49 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+} 
+ 
+ 
+ 
+ body {
+    
+    text-align: center;
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: gray;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .color-card {
+    width: 100px;
+    height: 100px;
+    border: 2px solid gray;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .color-card:hover {
+    transform: scale(1.1);
+  }

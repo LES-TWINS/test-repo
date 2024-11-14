@@ -1,0 +1,1225 @@
+*{ 
+
+box-sizing: border-box;
+
+margin: 0;
+
+padding: 0;
+
+}
+
+
+
+body{ 
+
+background-color: gray;
+
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+overflow-x: hidden;
+
+overflow-y: hidden;
+
+}
+
+
+.background{ 
+
+width: 100%;
+
+height: 100vh;
+
+
+
+background-image: url(./background2.webp);
+
+
+
+background-size: cover;
+
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+
+flex-direction: column;
+
+gap: 30px;
+
+position: relative;
+
+
+}
+
+
+.startButton{ 
+
+
+width: 140px;
+
+height: 140px;
+
+border-radius: 100%;
+
+
+position: absolute;
+
+top: 670px;
+
+font-size: 34px;
+
+background: linear-gradient(to bottom, orange, rgb(158, 37, 0));
+
+font-weight: bold;
+
+border: none;
+
+cursor: pointer;
+
+z-index: 11;
+
+background-image: url(./buttonTexture.webp);
+
+background-size: cover;
+
+transition: 0.3s;
+
+
+}
+
+.startButton:hover{
+
+    width: 155px;
+
+    height: 155px;
+
+    filter: brightness(80%);
+
+
+}
+
+
+
+.logo{ 
+
+scale: 0.4;
+ 
+/* animation: upAndDown infinite ease-in-out; */
+
+animation-name: upAndDown;
+
+animation-duration: 3.4s;
+
+animation-iteration-count: infinite;
+
+animation-timing-function: ease-in-out;
+
+position: relative;
+
+top: -120px;
+
+
+}
+
+
+@keyframes upAndDown {
+
+0%{  top: -120px; }
+
+
+50%{ 
+
+
+top: -85px;
+
+
+}
+
+100%{
+
+top: -120px;
+
+
+
+}
+
+    
+}
+
+
+
+.logo2{ 
+
+ 
+     
+    /* animation: upAndDown infinite ease-in-out; */
+    
+    animation-name: upAndDown2;
+    
+    animation-duration: 3.4s;
+    
+    animation-iteration-count: infinite;
+    
+    animation-timing-function: ease-in-out;
+
+    cursor: pointer;
+    
+    
+    }
+
+
+#returnHome{ 
+
+position: absolute;
+
+top: 4px;
+
+left: 3px;
+
+width: 240px;
+
+height: 200px;
+
+cursor: pointer;
+
+
+z-index: 111;
+
+}
+
+
+@keyframes upAndDown2 {
+
+    0%{  top: 4px; }
+    
+    
+    50%{ 
+    
+    
+    top: 14px;
+    
+    
+    }
+    
+    100%{
+    
+    top: 4px;
+    
+    
+    
+    }
+    
+        
+    }
+
+
+
+.curtains{ 
+
+
+
+width: 100%;
+
+position: absolute;
+
+
+display: none;
+
+
+}
+
+
+.leftCurtain, .rightCurtain{ 
+
+width: 50%;
+
+height: 100vh;
+
+background-color: darkred;
+
+z-index: 111111;
+
+display: flex;
+
+
+}
+
+.leftCurtain{ 
+
+position: relative;
+
+left: -1000px;
+
+animation: dropTheCurtains 3s ease-in-out;
+
+}
+
+
+.rightCurtain{ 
+
+    position: relative;
+    
+    right: -1000px;
+    
+    animation: dropTheCurtains2 3s ease-in-out;
+    
+    }
+
+
+
+    @keyframes dropTheCurtains {
+
+0%{ 
+
+top: -15px;
+
+transform: rotate(5deg);
+
+    left: -1000px;
+
+}
+
+50%{ 
+
+    top: 0px;
+
+left: 0px;
+
+transform: rotate(0deg);
+
+}
+
+
+100%{ 
+
+   
+
+    left: -1000px;
+    
+    
+    }
+
+        
+    }
+
+
+    @keyframes dropTheCurtains2 {
+
+        0%{ 
+
+            transform: rotate(-5deg);
+        
+            right: -1000px;
+        
+        }
+        
+        50%{ 
+        
+        right: 0px;
+        
+        transform: rotate(0deg);
+        
+        }
+        
+        
+        100%{ 
+        
+            right: -1000px;
+            
+            
+            }
+        
+                
+            }
+
+
+
+
+            .stage1{ 
+
+width: 100%;
+
+height: 100vh;
+
+
+position: relative;
+
+top: 0;
+
+display: none;
+
+justify-content: start;
+
+background-color: rgb(164, 223, 228);
+
+background: linear-gradient(to top, rgb(164, 204, 228), rgb(93, 122, 161), rgb(33, 71, 121));
+            }
+
+
+            .ground{ 
+
+position: absolute;
+
+bottom: 0;
+
+width: 100%;
+
+height: 190px;
+
+background-color: rgb(62, 150, 62);
+
+
+
+
+
+
+
+
+            }
+
+
+
+            .firstFrame{ 
+
+width: 55%;
+
+height: 100vh;
+
+display: flex;
+
+
+position: relative;
+
+justify-content: center;
+
+
+            }
+
+
+
+            .leaderboard{ 
+
+width: 500px;
+
+height: 100px;
+
+background-color: white;
+
+background: linear-gradient(to right, yellow, orange, darkred);
+
+position: relative;
+
+left: -500px;
+
+top: 800px;
+
+z-index: 11112;
+
+border-top-right-radius: 100px;
+
+border-bottom-right-radius: 100px;
+
+display: flex;
+
+align-items: center;
+
+
+            }
+
+            .score{
+
+position: relative;
+
+left: 160px;
+
+font-size: 35px;
+
+
+            }
+
+
+.victoryWindow{ 
+
+width: 570px;
+
+height: 650px;
+
+background: linear-gradient(to top, yellow, orange, darkred);
+
+border-radius: 7px;
+
+position: absolute;
+
+z-index: 111111;
+
+left: 50%;
+
+top: 50%;
+
+
+transform: translate(-50%, -50%);
+
+
+/* display: flex; */
+
+justify-content: center;
+
+align-items: center;
+
+flex-direction: column;
+
+gap: 34px;
+
+padding: 12px;
+
+display: none;
+
+animation: popOut ease-in-out 1s;
+
+}
+
+@keyframes popOut {
+
+0%{ 
+
+   scale: 0.4;
+
+
+
+}
+
+100%{ 
+
+    scale: 1;
+
+
+}
+    
+    
+}
+
+
+
+.close{ 
+
+position: absolute;
+
+top: 0;
+
+right: 0;
+
+width: 60px;
+
+height: 60px;
+
+border-radius: 3px;
+
+background-image: url(./closeIcon.png);
+
+background-size: cover;
+
+cursor: pointer;
+
+}
+
+
+.userIcon2{ 
+
+width: 90px;
+
+height: 90px;
+
+border-radius: 100%;
+
+border: white solid 3px;
+
+
+}
+
+.score2{ 
+
+color: white;
+
+font-size: 38px;
+
+text-align: center;
+
+position: relative;
+
+top: -20px;
+
+}
+
+.swagDawg{ 
+
+    scale: 1.4;
+
+border-radius: 3px;
+border: white solid 3px;
+
+
+}
+
+
+
+            .profile{ 
+
+position: absolute;
+
+left: -24px;
+
+width: 155px;
+
+height: 155px;
+
+background: linear-gradient(to bottom, yellow, orange);
+
+border-radius: 200px;
+
+top: -28px;
+
+background-image: url(./userIcon.png);
+
+background-size: cover;
+
+
+            }
+
+            .victorious{ 
+
+font-size: 28px;
+
+color: rgb(0, 0, 0);
+
+position: relative;
+
+top: 0px;
+
+left: 245px;
+
+width: 380px;
+
+height: 190px;
+
+text-align: center;
+
+box-sizing: border-box;
+
+background: linear-gradient(to top, yellow, orange);
+
+/* background-image: url(./plankTexture.jpg);
+
+background-size: cover; */
+
+
+border-radius: 20px;
+
+display: flex;
+
+padding: 15px;
+
+align-items: center;
+
+            }
+
+
+.winningText{ 
+
+    font-size: 36px;
+
+    color: rgb(255, 255, 255);
+    
+    position: absolute;
+    
+    top: 60px;
+    
+    width: 500px;
+    
+    
+    text-align: center;
+    
+
+
+
+}
+
+.clouds{ 
+
+position: absolute;
+
+width: 230px;
+
+height: 200px;
+
+top: 280px;
+
+left: -300px;
+
+animation: hoverOver 15s ease-in-out;
+
+animation-iteration-count: infinite;
+
+}
+
+@keyframes hoverOver {
+
+0%{ 
+
+    left: -300px;
+
+
+
+}
+
+100%{ 
+
+left: 1060px;
+
+
+
+}
+
+
+
+    
+}
+
+
+
+
+            .fences{ 
+
+position: absolute;
+
+width: 55%;
+
+height: 450px;
+
+top: 475px;
+
+right: 468px;
+
+display: flex;
+
+gap: 0px;
+
+z-index: 111;
+
+            }
+
+
+            .fence{ 
+
+                width: 350px;
+
+                height: 450px;
+
+
+
+            }
+
+
+
+.grass{ 
+
+position: absolute;
+
+bottom: 0;
+
+left: -200px;
+
+width: 900px;
+
+height: 270px;
+
+z-index: 11111;
+
+}
+
+#grass2{ 
+
+    position: absolute;
+    
+    bottom: 0;
+    
+    left: 240px;
+    
+    width: 900px;
+    
+    height: 270px;
+    
+    z-index: 999;
+    
+    }
+    
+
+
+
+
+
+.theDog{ 
+/* 
+scale: 0.3;
+
+
+position: absolute;
+
+top: -700px;
+
+left: -300px;
+
+display: flex;
+
+
+
+z-index: 1111; */
+
+top: 100px;
+
+scale: 0.3;
+position: absolute;
+/* top: -700px; */
+/* left: -300px; */
+display: flex;
+z-index: 1111;
+
+
+}
+
+.layer{ 
+
+position: relative;
+
+height: 100%;
+
+width: 10%;
+
+box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.527);
+
+
+}
+
+
+           
+.test{
+    background-image: url(./Doggy.png);
+    width:600px;
+    height: 800px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mask-image: url(./dogColor.png);
+    -webkit-mask-image: url(./dogColor.png); 
+
+}
+.dogImage{ 
+
+/* background-color: rgb(255, 255, 255);
+
+-webkit-mask-image: url(./dogColor.png);  */
+
+/* you dont apply the mask property to the element u want to mask, u apply it to the other
+element that will mask that element with the included color in this one */
+
+/* mask-image: url(./dogColor.png);
+mask-repeat: no-repeat; 
+
+                z-index: 111;
+
+transition: 0.6s; */
+
+            }
+
+
+
+
+.customBar{ 
+
+position: relative;
+
+z-index: 1000;
+
+background-color: rgb(30, 28, 44);
+
+width: 45%;
+
+height: 100vh;
+
+right: 0px;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+
+
+
+
+/* display: flex;
+
+flex-direction: column;
+
+
+
+justify-content: space-between;
+
+align-items: center;
+
+border-left: rgb(36, 22, 22) 4px solid; */
+
+}
+
+/* .plank{ 
+
+width: 100%;
+
+height: 20%;
+
+background-color: rgb(15, 15, 37);
+
+/* background-image: url(./plankTexture.jpg); */
+
+/* background-size: cover;
+
+border-top: 3px black solid;
+
+border: rgb(136, 241, 255) solid 3px;
+
+
+
+
+box-shadow: 0px 0px 40px 7px rgb(0, 255, 242);
+
+
+} */ 
+
+
+.border{ 
+
+    position: absolute;
+
+height: 100%;
+
+width: 120px;
+
+left: -40px;
+
+background-image: url(./plankTexture.jpg);
+
+background-size: cover;
+
+box-shadow: 0px 0px 14px 15px rgba(0, 0, 0, 0.459);
+
+}
+
+
+
+.cards{ 
+
+display: flex;
+
+
+flex-wrap: wrap;
+
+width: 600px;
+
+height: 700px;
+
+scale: 0.8;
+
+justify-content: center;
+
+align-items: center;
+
+gap: 10px;
+
+position: relative;
+
+transform: rotate(0deg);
+
+transition: 1s;
+
+
+
+}
+
+.stick{ 
+
+position: relative;
+
+background-color: white;
+
+width: 15px;
+
+height: 600px;
+
+top: 200px;
+
+left: 310px;
+
+
+
+}
+
+.boundless{ 
+
+position: absolute;
+
+width: 260px;
+
+height: 260px;
+
+z-index: 1112;
+
+border-radius: 100%;
+
+background: radial-gradient(circle, white, #ff9f50, #ff5e14); 
+
+
+border: white 5px solid;
+
+
+
+}
+
+
+
+
+.card{ 
+
+height: 340px;
+
+width: 210px;
+
+background-color: black;
+
+position: absolute;
+
+cursor: pointer;
+
+transition: 0.5s;
+
+border-top-left-radius: 100%;
+
+box-shadow: 5px 0px 20px 20px rgba(0, 0, 0, 0.466);
+
+
+}
+
+.card:hover{ 
+
+width: 342px;
+
+width: 234px;
+
+
+}
+
+
+#card1{ 
+
+transform: rotate(45deg);
+
+left: 320px;
+
+top: 30px;
+
+background-color: white;
+
+
+}
+
+#card2{ 
+
+    transform: rotate(90deg);
+    
+    left: 400px;
+    
+    z-index: 111;
+    
+
+    background-color: rgb(233, 233, 233);
+    
+    }
+
+    #card3{ 
+
+        transform: rotate(-135deg);
+
+        top: 330px;
+        
+        right: 320px;
+        
+        z-index: 1111;
+        
+        background-color: rgb(196, 196, 196);
+
+        
+        }
+
+        #card4{ 
+
+            transform: rotate(-45deg);
+            
+            right: 320px;
+            
+            top: 30px;
+
+            background-color: rgb(214, 214, 214);
+            
+            
+            }
+            
+            #card5{ 
+            
+                transform: rotate(-90deg);
+                
+                right: 400px;
+                
+                z-index: 111;
+
+                background-color: white;
+                
+                
+                }
+            
+                #card6{ 
+            
+                    transform: rotate(135deg);
+            
+                    top: 330px;
+                    
+                    left: 320px;
+                    
+                    z-index: 111;
+                    
+                    
+                    }
+            
+
+    
+                
+
+
+
+#specific5{ 
+
+
+z-index: 1111;
+
+}
+
+.barContent{ 
+
+    display: flex;
+
+    flex-direction: column;
+    
+    gap: 40px;
+    
+    position: absolute;
+
+   justify-content: center;
+
+   align-items: center;
+
+
+
+}
+
+
+/* h1{ 
+
+font-size: 40px;
+
+color: rgb(0, 0, 0);
+
+font-weight: bolder;
+
+position: relative;
+
+top: -50px;
+
+} */
+
+
+.hatBoxes{ 
+
+display: flex;
+
+flex-wrap: wrap;
+
+gap: 6px;
+
+position: relative;
+
+top: -45px;
+
+}
+
+
+.box{ 
+
+    width: 200px;
+
+    height: 190px;
+
+    background-color: rgb(248, 248, 248);
+
+    border: 3px solid black;
+    overflow: none;
+
+    position: relative;
+
+
+    background-image: url(./Panama.png);
+
+
+    background-size: cover;
+
+
+    cursor: pointer;
+
+}
+
+
+#box2{ 
+
+background-image: url(./Tiara.png);
+
+background-size: cover;
+
+
+
+}
+
+
+#box3{ 
+
+    background-image: url(./Berret.png);
+    
+    background-size: 245px 400px;
+    
+    background-position: center 20px;
+    
+    
+    }
+
+    #box4{ 
+
+        background-image: url(./Arrow_Tattoo.png);
+        
+        background-size: 500px 600px;
+        
+    background-position: center -40px;
+        
+        
+        }
+        
+    
+
